@@ -1,0 +1,58 @@
+
+# Todo: remove from here
+raw_data = pd.read_csv('https://archive.ics.uci.edu/ml/machine-learning-databases/heart-disease/processed.cleveland.data', sep=',',
+names = ['age', 'sex', 'cp', 'trestbps', 'chol', 'fbs', 'restecg', 'thalach', 'exang', 'oldpeak', 'slope', 'ca', 'thal', 'num'])
+
+pd.options.display.max_rows = 4000
+
+### Fix colums types
+data = raw_data
+
+def tryRoundToInt(x):
+    try: 
+        return round(x, 0)
+    except:
+        return None
+
+# sex
+data['sex'] = tryRoundToInt(data['sex'])
+data['sex'] = data['sex'].apply(lambda value: 'male' if value == 1 else 'female' if value == 0 else None)
+data['sex'] = pd.Categorical(data['sex'], categories=['male', 'female'])
+
+# chest pain type
+data['cp'] = tryRoundToInt(data['cp'])
+data['cp'] = data['cp'].apply(lambda value: 'typical angina' if value == 1 else 'atypical angina' if value == 2 else 'non-anginal pain' if value == 3 else 'asymptomatic' if value == 4 else None)
+data['cp'] = pd.Categorical(data['cp'], categories=['typical angina', 'atypical angina', 'non-anginal pain', 'asymptomatic'])
+
+# fasting blood sugar > 120 mg/dl
+data['fbs'] = tryRoundToInt(data['fbs'])
+data['fbs'] = data['fbs'].apply(lambda value: 'True' if value == 1 else 'False' if value == 0 else None)
+data['fbs'] = pd.Categorical(data['fbs'], categories=['True', 'False'])
+
+# resting electrocardiographic results
+data['restecg'] = tryRoundToInt(data['restecg'])
+data['restecg'] = data['restecg'].apply(lambda value: 'normal' if value == 0 else 'abnormality' if value == 1 else 'hypertrophy' if value == 2 else None)
+data['restecg'] = pd.Categorical(data['restecg'], categories=['normal', 'abnormality', 'hypertrophy'])
+
+# exercise induced angina
+data['exang'] = tryRoundToInt(data['exang'])
+data['exang'] = data['exang'].apply(lambda value: 'Yes' if value == 1 else 'No' if value == 0 else None)
+data['exang'] = pd.Categorical(data['exang'], categories=['Yes', 'No'])
+
+# slope of the peak exercise ST segment
+data['slope'] = tryRoundToInt(data['slope'])
+data['slope'] = data['slope'].apply(lambda value: 'upsloping' if value == 1 else 'flat' if value == 2 else 'downsloping' if value == 3 else None)
+data['slope'] = pd.Categorical(data['slope'], categories=['upsloping', 'flat', 'downsloping'])
+
+# thal
+data['thal'] = tryRoundToInt(data['thal'])
+data['thal'] = data['thal'].apply(lambda value: 'normal' if value == 3 else 'fixed defect' if value == 6 else 'reversable defect' if value == 7 else None)
+data['thal'] = pd.Categorical(data['thal'], categories=['normal', 'fixed defect', 'reversable defect'])
+
+# diagnosis of heart disease (angiographic disease status)
+data['num'] = tryRoundToInt(data['num'])
+data['num'] = data['num'].apply(lambda value: '< 50% diameter narrowing' if value == 0 else '> 50% diameter narrowing' if value == 1 else None)
+data['num'] = pd.Categorical(data['num'], categories=['< 50% diameter narrowing', '> 50% diameter narrowing'])
+
+data.head()
+#data
