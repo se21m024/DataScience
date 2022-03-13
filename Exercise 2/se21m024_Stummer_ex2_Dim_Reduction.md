@@ -22,7 +22,7 @@ Donor:
 
 ## General information
 
-The following 8 features were extracted from the data set. Categorical columns were converted to numbers and (elements with NaN values were dropped).
+The following 14 features were extracted from the data set. Categorical columns were converted to numbers and elements with NaN values were dropped.
 
 ![Big_Feature_Head_1](./Screenshots/Big_Feature_Head_1.png)
 
@@ -86,8 +86,7 @@ Data Creators:<br/>
 
 ## General information
 
-todo:
-The following 8 features were extracted from the data set. Categorical columns were converted to numbers and (elements with NaN values were dropped).
+The following 14 features were extracted from the data set. Categorical columns factorized and elements with NaN values were dropped.
 
 ![Small_Feature_Head_1](./Screenshots/Small_Feature_Head_1.png)
 
@@ -103,14 +102,6 @@ It can be seen
 ![Small_PCA_1](./Screenshots/Small_PCA_1.png)
 
 The principle component 1
-
-<div style="page-break-after: always"></div>
-
-To make
-
-![Small_PCA_2](./Screenshots/Small_PCA_2.png)
-
-The plot suggests
 
 <div style="page-break-after: always"></div>
 
