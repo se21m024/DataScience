@@ -67,10 +67,6 @@ The t-SNE produces a C-shaped projection with far more space between the individ
 
 <div style="page-break-after: always"></div>
 
-## Comparison to analysis without dimensionality reduction
-
-Investigating the results of the previous algorithms, I would say that the benefit of the dimensionality reduction lays in the ability to estimate the overall distribution and clustering of the data. With the <i>classical</i> approach applied in the first exercise, the distribution based on single features or the correlation between two or max. three features can be spotted but it does not indicate the overall clustering of the data. On the over hand, when projecting higher dimensional data into e.g. the two dimensional space, the correlation between individual features cannot be observed but insights in the overall structure of the data can be gained. This might be benefitial to select a specific cluster algorithm and estimate a first number of clusters for these algorithms. Summing up, it is very hard to spot specific correlations in the data when observing more than two or three features at once.
-
 # Small Dataset: Heart Disease
 
 <br/>
@@ -97,17 +93,16 @@ The following 14 features were extracted from the data set. Categorical columns 
 ### PCA
 
 A basic two dimensional principle component analysis was performed.<br/>
-It can be seen
+The principle component 1 accounts for 76.7% of the variance in the data set, whereas principle component 2 accounts for 13.5% of the variance. This sums up to 90.2%. For the observer this seems quite surprising as those numbers are not that different from those of the PCA for the big data set (census income), although the plot of the small data set indicates a wider variance in both components (more of a ball-shape compared to the long-ellipse-shape of the big data set).<br/>
+The data points seem to be clustered around a specific center point in the mid/low left of the diagram with more outliners along coordinate 2 compared to coordinate 1.
 
 ![Small_PCA_1](./Screenshots/Small_PCA_1.png)
-
-The principle component 1
 
 <div style="page-break-after: always"></div>
 
 ### MDS
 
-For
+When applying MDS the data appears in a more oblong shape compared to applying PCA. But again the data points seem to be clustered in only one center point. Overall the points appear to be more cohesive compared to the projection gathered with PCA.
 
 ![Small_MDS_1](./Screenshots/Small_MDS_1.png)
 
@@ -115,12 +110,10 @@ For
 
 ### t-SNE
 
-For
+When applying t-SNE the data seems to be more clustered and remarkable regions without any data points (I would even describe them as <i>holes</i>). A quite isolated cluster can be observed in the top right of the plot. The overall distance between the points seems to be less condense when compared to the plots of the other algorithms. This also correlates to the interpretation of the t-SNE application on the big data set. This is not surprising, due to the intention of the algorithm to place similar data points near to each other and dissimilar data points far away from one another.
 
 ![Small_t-SNE_1](./Screenshots/Small_t-SNE_1.png)
 
-<div style="page-break-after: always"></div>
+# Comparison to analysis without dimensionality reduction
 
-## Comparison to analysis without dimensionality reduction
-
-Investigating
+Investigating the results of the previous algorithms, I would say that, for both data sets, the benefit of the dimensionality reduction lays in the ability to estimate the overall distribution and clustering of the data. With the <i>classical</i> approach applied in the first exercise, the distribution based on single features or the correlation between two or max. three features can be spotted but it does not indicate the overall clustering of the data. On the over hand, when projecting higher dimensional data into e.g. the two dimensional space, the correlation between individual features cannot be observed but insights in the overall structure of the data can be gained. This might be benefitial to select a specific cluster algorithm and estimate a first number of clusters for these algorithms. Summing up, I find it very difficult to spot specific correlations in the data when observing more than two or three features at once, independent of the application of dimensionality reduction.
