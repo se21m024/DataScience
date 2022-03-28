@@ -1,4 +1,4 @@
-# Data Science<br/>Exercise 2
+# Data Science<br/>Exercise 3<br/>Clustering
 
 ## Student:<br/>se21m024<br/>Thomas Stummer<br/>
 
@@ -19,6 +19,35 @@ Donor:
 <br/>Silicon Graphics.
 <br/>terran '@' ecn.purdue.edu, ronnyk '@' sgi.com
 <br/><br/>
+
+# Alotithms
+
+The following three clustering algorithms were chosen because the results of the comparison overview on scikit learn seemed good:
+
+- Partitative Clustering (K-Means Family)
+
+"Mini-batch k-means: k-means variation using "mini batch" samples for data sets that do not fit into memory." quote
+
+two_means = cluster.MiniBatchKMeans(n_clusters=params["n_clusters"])
+
+- Agglomerative Clustering
+
+  average_linkage = cluster.AgglomerativeClustering(
+  linkage="average",
+  affinity="cityblock",
+  n_clusters=params["n_clusters"],
+  connectivity=connectivity,
+
+- density based: DBSCAN
+  DBSCAN and not OPTICS because it is significatly faster
+
+would have been nice: because looks very good on demo page
+
+- Spectral Clustering
+
+tbd: are they all also well applicable /efficient for high dimensional data?
+
+#####################################
 
 ## General information
 
