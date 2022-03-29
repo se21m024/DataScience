@@ -20,7 +20,7 @@ Donor:
 <br/>terran '@' ecn.purdue.edu, ronnyk '@' sgi.com
 <br/><br/>
 
-# Alotithms
+# Algotithms
 
 The following three clustering algorithms were chosen because the results of the comparison overview on scikit learn seemed good:
 
