@@ -1,6 +1,6 @@
 # Machine Learning<br>Exercise 2 - More Comparative Evaluation
 
-<br/>Student: se21m024, Thomas Stummer
+<br/>Student: se21m024, Thomas Stummer, matriculation number: 1425616
 <br/><br/>The source code can be found in the document <b><i>se21m024_Stummer_ml_ex2_comp_eval.ipynb</i></b>.
 <br/><br/>
 Small data set: Heart Failure Prediction<br>
@@ -43,7 +43,7 @@ For the k-NN apporach, k-d tree was chosen as algorithm to gain results within a
 
 ### Accuracy and F1 measure
 
-The highest (= best) accuracy and F1 measures were accomplished by the decision tree with the sqrt or the log2 function to limit the number of features for consideration for each split. An F1 measure of 0.689 was achieved.
+The highest (= best) accuracy and F1 measures were accomplished by the decision tree with the sqrt and the log2 function to limit the number of features for consideration for each split. An F1 measure of 0.689 was achieved.
 The worst accuracy and F1 measures were reached by the perceptron (the chosen alpha value had no impact on the outcome). An F1 measure of only 0.223 was achieved.
 <br><br>
 
@@ -53,7 +53,7 @@ The training time was very similar for the perceptron, the k-NN and the decision
 With 0.006 seconds, the training time for the support vector machine (SVM) took about two to three times as long as the algorithms mentioned above.
 The training time for the random forests ranged from 0.015 seconds (with 10 trees) to 0.128 seconds (with 100 trees). It can be seen that the overall training took about 5.8 times as long when training 10 times more forests.
 
-The testing time for the percepton was the least with 0.001 seconds an the longest for the random forests with about 0.011 seconds.
+The testing time for the percepton was the least with 0.001 seconds and the longest for the random forests with about 0.011 seconds.
 
 <div style="page-break-after: always"></div>
 
@@ -97,13 +97,15 @@ The worst accuracy and F1 measures were reached by the perceptron (the chosen al
 The training time was quite similar for the perceptron, the k-NN, the unlimited decision tree and the random forests with 10 trees, ranging from about 0.073 seconds to about 0.134 seconds.
 The shortest training time was achived by the descition tree with either the sqrt or the log2 limit function with 0.016 seconds resp. 0.014 seconds.
 With 2.288 seconds, the training time for the SVM was by far the most time consuming one.
-The training time for the random forests with 100 trees ranged from 0.79 seconds to 0.93 seconds and is located between the timespans mentioned above. Like in the small data set, it can be seen that the overall training took for random forests took about 10 times longer when training 10 times more forests.
+The training time for the random forests with 100 trees ranged from 0.79 seconds to 0.93 seconds and is located between the timespans mentioned above. Like in the small data set, it can be seen that the overall training time for random forests took about 10 times longer when training 10 times more forests.
 
 With about 0.002 seconds, the testing time for the percepton and the decision tree was the least. The highest training time was required by the SVM with about 0.912 seconds.
 
 <div style="page-break-after: always"></div>
 
 # Music data set
+
+Different features were extracted from the songs: beats per minutes, beats per minutes statistics, chroma and Mel-frequency cepstral coefficients (MFCCs). The target feature was the genre of the song (1 out of 10). The train/test split was chosen to be 2/3 to 1/3 as required. For the k-NN approach, k-d tree was chosen as algorithm to gain results within a reasonable amount of time.
 
 ## Results tables
 
@@ -125,6 +127,8 @@ With about 0.002 seconds, the testing time for the percepton and the decision tr
 | Random Forests (num trees: 10, max features: log2)  | 0.167    | 0.129 | 0.012001 sec  | 0.001999 sec |
 | Random Forests (num trees: 100, max features: sqrt) | 0.164    | 0.124 | 0.110754 sec  | 0.009999 sec |
 | Random Forests (num trees: 100, max features: log2) | 0.164    | 0.124 | 0.111004 sec  | 0.01 sec     |
+
+<div style="page-break-after: always"></div>
 
 ### Beats per minutes statistics
 
@@ -164,8 +168,6 @@ With about 0.002 seconds, the testing time for the percepton and the decision tr
 | Random Forests (num trees: 100, max features: sqrt) | 0.433    | 0.413 | 0.322 sec     | 0.013001 sec |
 | Random Forests (num trees: 100, max features: log2) | 0.436    | 0.412 | 0.245999 sec  | 0.012001 sec |
 
-<div style="page-break-after: always"></div>
-
 ### Mel-frequency cepstral coefficients (MFCCs)
 
 | Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
@@ -185,17 +187,17 @@ With about 0.002 seconds, the testing time for the percepton and the decision tr
 | Random Forests (num trees: 100, max features: sqrt) | 0.7      | 0.684 | 0.380085 sec  | 0.013 sec    |
 | Random Forests (num trees: 100, max features: log2) | 0.691    | 0.676 | 0.275002 sec  | 0.012 sec    |
 
+<div style="page-break-after: always"></div>
+
 ## Interpretation
 
 ### Accuracy and F1 measure
 
 As expected, the choice of the extracted feature used to train the models with the songs of the music data set had a huge impact on the prediction results.
 
-When using the beats per minute (bpm) and the beats per minutes statistics (bpm_s) the classification accuracy was very poor. The F1 measure for bmp ranged from 0.012 (perceptron) to 0.134 (decision tree). The F1 measure for bmp_s ranged from 0.014 (perceptron) to 0.216 (random forests).
+When using the beats per minute (bpm) and the beats per minutes statistics (bpm_s) the classification accuracy was very poor. The F1 measure for bpm ranged from 0.012 (perceptron) to 0.134 (decision tree). The F1 measure for bpm_s ranged from 0.014 (perceptron) to 0.216 (random forests).
 The F1 measure was significantly higher when using the chroma feature extraction, ranging from 0.275 (perceptron) to 0.444 (SVM).
 The most accurate classification with an F1 measure of 0.707 was achived by using the Mel-frequency cepstral coefficients (MFCCs) in combination with SVM. The next accurate results were reached by random forests (up to an F1 of 0.684), the decison tree (up to an F1 of 0.438) and the k-NN (up to an F1 of 0.364). The least accurate results for the MFCCs was reached by the perceptron with an F1 measure of 0.296.
-
-<div style="page-break-after: always"></div>
 
 ### Training and testing time
 
@@ -221,7 +223,7 @@ The testing time was very similar among all extracted features with the perceptr
 (columns: actual classes, rows: predicted classes)
 
 When inspecting the confusion matrix of the best overall result (SVM with MCFFs) it can be seen that 97% of the tested classical songs were categorized correctly. More specifically, only 3% of the classical songs were classified as jazz songs. All other classical songs were correctly classified as classical songs.
-The genre the model had the most problems was rock. Only 30.2% of the rock songs were corretly classified. It seems to be most difficult for the model to distinct rock songs from disco songs. As many as 23% of all rock songs were classified as disco songs.
+The genre the model had the most problems was rock. Only 30.2% of the rock songs were correctly classified. It seems to be most difficult for the model to distinct rock songs from disco songs. As many as 23.3% of all rock songs were classified as disco songs.
 
 # Comparison between data sets
 
