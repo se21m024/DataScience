@@ -22,17 +22,22 @@ For the k-NN apporach, k-d tree was chosen as algorithm to gain results within a
 
 ## Results table
 
-| Algorithm with parameters          | Accuracy | F1    | Training time | Testing time |
-| ---------------------------------- | -------- | ----- | ------------- | ------------ |
-| k-NN (5-NN)                        | 0.616    | 0.549 | 0.001997 sec  | 0.003997 sec |
-| k-NN (10-NN)                       | 0.677    | 0.554 | 0.001999 sec  | 0.004003 sec |
-| k-NN (15-NN)                       | 0.687    | 0.577 | 0.002001 sec  | 0.003998 sec |
-| Perceptron (alpha: 0.0001)         | 0.687    | 0.559 | 0.002 sec     | 0.000998 sec |
-| Perceptron (alpha: 0.001)          | 0.687    | 0.559 | 0.002 sec     | 0.001001 sec |
-| Perceptron (alpha: 0.01)           | 0.687    | 0.559 | 0.002 sec     | 0.000999 sec |
-| Decision tree (max features: None) | 0.697    | 0.702 | 0.003001 sec  | 0.001 sec    |
-| Decision tree (max features: sqrt) | 0.626    | 0.628 | 0.001999 sec  | 0.000998 sec |
-| Decision tree (max features: log2) | 0.626    | 0.628 | 0.001 sec     | 0.001 sec    |
+| Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
+| --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
+| Perceptron (alpha: 0.0001)                          | 0.394    | 0.223 | 0.002998 sec  | 0.001003 sec |
+| Perceptron (alpha: 0.001)                           | 0.394    | 0.223 | 0.002004 sec  | 0.001999 sec |
+| Perceptron (alpha: 0.01)                            | 0.394    | 0.223 | 0.00196 sec   | 0.001 sec    |
+| k-NN (1-NN)                                         | 0.566    | 0.532 | 0.003003 sec  | 0.004989 sec |
+| k-NN (2-NN)                                         | 0.566    | 0.467 | 0.002 sec     | 0.004999 sec |
+| k-NN (3-NN)                                         | 0.525    | 0.481 | 0.002003 sec  | 0.004998 sec |
+| Decision Tree (max features: None)                  | 0.616    | 0.594 | 0.002999 sec  | 0.000999 sec |
+| Decision Tree (max features: sqrt)                  | 0.697    | 0.689 | 0.002999 sec  | 0.001003 sec |
+| Decision Tree (max features: log2)                  | 0.697    | 0.689 | 0.002 sec     | 0.002003 sec |
+| SVM                                                 | 0.636    | 0.578 | 0.006001 sec  | 0.002001 sec |
+| Random Forests (num trees: 10, max features: sqrt)  | 0.636    | 0.593 | 0.016998 sec  | 0.002001 sec |
+| Random Forests (num trees: 10, max features: log2)  | 0.636    | 0.593 | 0.015 sec     | 0.002999 sec |
+| Random Forests (num trees: 100, max features: sqrt) | 0.687    | 0.653 | 0.128 sec     | 0.010965 sec |
+| Random Forests (num trees: 100, max features: log2) | 0.687    | 0.653 | 0.12086 sec   | 0.009999 sec |
 
 ## Interpretation
 
@@ -52,17 +57,22 @@ For the k-NN approach, k-d tree was chosen as algorithm to gain results within a
 
 ## Results table
 
-| Algorithm with parameters          | Accuracy | F1    | Training time | Testing time  |
-| ---------------------------------- | -------- | ----- | ------------- | ------------- |
-| k-NN (5-NN)                        | 0.965    | 0.965 | 12.033436 sec | 20.152396 sec |
-| k-NN (10-NN)                       | 0.955    | 0.954 | 12.148761 sec | 24.076917 sec |
-| k-NN (15-NN)                       | 0.946    | 0.946 | 12.482787 sec | 31.48592 sec  |
-| Perceptron (alpha: 0.0001)         | 0.584    | 0.563 | 9.840077 sec  | 0.047 sec     |
-| Perceptron (alpha: 0.001)          | 0.584    | 0.563 | 9.665985 sec  | 0.041996 sec  |
-| Perceptron (alpha: 0.01)           | 0.584    | 0.563 | 9.708394 sec  | 0.045001 sec  |
-| Decision tree (max features: None) | 0.933    | 0.933 | 5.58124 sec   | 0.096001 sec  |
-| Decision tree (max features: sqrt) | 0.877    | 0.877 | 1.212917 sec  | 0.084999 sec  |
-| Decision tree (max features: log2) | 0.87     | 0.87  | 0.959233 sec  | 0.095001 sec  |
+| Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
+| --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
+| Perceptron (alpha: 0.0001)                          | 0.527    | 0.439 | 0.082004 sec  | 0.001982 sec |
+| Perceptron (alpha: 0.001)                           | 0.527    | 0.439 | 0.115 sec     | 0.003002 sec |
+| Perceptron (alpha: 0.01)                            | 0.527    | 0.439 | 0.106003 sec  | 0.002 sec    |
+| k-NN (1-NN)                                         | 0.755    | 0.755 | 0.134 sec     | 0.180002 sec |
+| k-NN (2-NN)                                         | 0.729    | 0.723 | 0.089997 sec  | 0.172999 sec |
+| k-NN (3-NN)                                         | 0.735    | 0.731 | 0.09252 sec   | 0.167 sec    |
+| Decision Tree (max features: None)                  | 0.708    | 0.71  | 0.073037 sec  | 0.001999 sec |
+| Decision Tree (max features: sqrt)                  | 0.688    | 0.69  | 0.016003 sec  | 0.001998 sec |
+| Decision Tree (max features: log2)                  | 0.673    | 0.677 | 0.014034 sec  | 0.002001 sec |
+| SVM                                                 | 0.746    | 0.736 | 2.287948 sec  | 0.912415 sec |
+| Random Forests (num trees: 10, max features: sqrt)  | 0.782    | 0.777 | 0.086034 sec  | 0.008001 sec |
+| Random Forests (num trees: 10, max features: log2)  | 0.772    | 0.768 | 0.079967 sec  | 0.009035 sec |
+| Random Forests (num trees: 100, max features: sqrt) | 0.802    | 0.798 | 0.925223 sec  | 0.063999 sec |
+| Random Forests (num trees: 100, max features: log2) | 0.801    | 0.796 | 0.790013 sec  | 0.067001 sec |
 
 ## Interpretation
 
@@ -74,6 +84,114 @@ The decision tree was by far the fastest to train (especially with max features 
 Regarding the testing time the perceptron was fastest (half the time was required compared to the decision tree). The testing time of the k-NN was many magnitudes higher than for the two other algorithms.
 
 <div style="page-break-after: always"></div>
+
+# Music data set
+
+## Results tables
+
+### bpm
+
+| Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
+| --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
+| Perceptron (alpha: 0.0001)                          | 0.082    | 0.012 | 0.006035 sec  | 0.001002 sec |
+| Perceptron (alpha: 0.001)                           | 0.082    | 0.012 | 0.004999 sec  | 0.0 sec      |
+| Perceptron (alpha: 0.01)                            | 0.082    | 0.012 | 0.005002 sec  | 0.000999 sec |
+| k-NN (1-NN)                                         | 0.148    | 0.119 | 0.002 sec     | 0.007002 sec |
+| k-NN (2-NN)                                         | 0.127    | 0.083 | 0.001 sec     | 0.006999 sec |
+| k-NN (3-NN)                                         | 0.103    | 0.078 | 0.000999 sec  | 0.008002 sec |
+| Decision Tree (max features: None)                  | 0.173    | 0.134 | 0.001005 sec  | 0.000997 sec |
+| Decision Tree (max features: sqrt)                  | 0.173    | 0.134 | 0.001 sec     | 0.001001 sec |
+| Decision Tree (max features: log2)                  | 0.173    | 0.134 | 0.000999 sec  | 0.001 sec    |
+| SVM                                                 | 0.179    | 0.098 | 0.017004 sec  | 0.004996 sec |
+| Random Forests (num trees: 10, max features: sqrt)  | 0.167    | 0.129 | 0.013001 sec  | 0.001003 sec |
+| Random Forests (num trees: 10, max features: log2)  | 0.167    | 0.129 | 0.012001 sec  | 0.001999 sec |
+| Random Forests (num trees: 100, max features: sqrt) | 0.164    | 0.124 | 0.110754 sec  | 0.009999 sec |
+| Random Forests (num trees: 100, max features: log2) | 0.164    | 0.124 | 0.111004 sec  | 0.01 sec     |
+
+### music_bpm_statistics
+
+| Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
+| --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
+| Perceptron (alpha: 0.0001)                          | 0.088    | 0.014 | 0.006968 sec  | 0.0 sec      |
+| Perceptron (alpha: 0.001)                           | 0.088    | 0.014 | 0.006 sec     | 0.001 sec    |
+| Perceptron (alpha: 0.01)                            | 0.088    | 0.014 | 0.007 sec     | 0.0 sec      |
+| k-NN (1-NN)                                         | 0.176    | 0.176 | 0.002035 sec  | 0.007997 sec |
+| k-NN (2-NN)                                         | 0.13     | 0.123 | 0.001997 sec  | 0.008962 sec |
+| k-NN (3-NN)                                         | 0.155    | 0.147 | 0.002034 sec  | 0.009 sec    |
+| Decision Tree (max features: None)                  | 0.17     | 0.165 | 0.005042 sec  | 0.0 sec      |
+| Decision Tree (max features: sqrt)                  | 0.2      | 0.198 | 0.002999 sec  | 0.0 sec      |
+| Decision Tree (max features: log2)                  | 0.203    | 0.201 | 0.002999 sec  | 0.001001 sec |
+| SVM                                                 | 0.239    | 0.214 | 0.022999 sec  | 0.006 sec    |
+| Random Forests (num trees: 10, max features: sqrt)  | 0.212    | 0.203 | 0.019 sec     | 0.001999 sec |
+| Random Forests (num trees: 10, max features: log2)  | 0.227    | 0.216 | 0.019999 sec  | 0.002001 sec |
+| Random Forests (num trees: 100, max features: sqrt) | 0.215    | 0.209 | 0.169999 sec  | 0.013 sec    |
+| Random Forests (num trees: 100, max features: log2) | 0.212    | 0.207 | 0.191 sec     | 0.013001 sec |
+
+### music_chroma
+
+| Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
+| --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
+| Perceptron (alpha: 0.0001)                          | 0.303    | 0.275 | 0.015 sec     | 0.001001 sec |
+| Perceptron (alpha: 0.001)                           | 0.303    | 0.275 | 0.015 sec     | 0.0 sec      |
+| Perceptron (alpha: 0.01)                            | 0.303    | 0.275 | 0.015 sec     | 0.0 sec      |
+| k-NN (1-NN)                                         | 0.303    | 0.303 | 0.007999 sec  | 0.029001 sec |
+| k-NN (2-NN)                                         | 0.321    | 0.3   | 0.01 sec      | 0.047 sec    |
+| k-NN (3-NN)                                         | 0.309    | 0.296 | 0.007 sec     | 0.047001 sec |
+| Decision Tree (max features: None)                  | 0.294    | 0.292 | 0.044999 sec  | 0.001003 sec |
+| Decision Tree (max features: sqrt)                  | 0.282    | 0.282 | 0.006001 sec  | 0.001 sec    |
+| Decision Tree (max features: log2)                  | 0.355    | 0.35  | 0.004 sec     | 0.0 sec      |
+| SVM                                                 | 0.47     | 0.444 | 0.073998 sec  | 0.024 sec    |
+| Random Forests (num trees: 10, max features: sqrt)  | 0.436    | 0.422 | 0.035551 sec  | 0.001955 sec |
+| Random Forests (num trees: 10, max features: log2)  | 0.415    | 0.398 | 0.027015 sec  | 0.001999 sec |
+| Random Forests (num trees: 100, max features: sqrt) | 0.433    | 0.413 | 0.322 sec     | 0.013001 sec |
+| Random Forests (num trees: 100, max features: log2) | 0.436    | 0.412 | 0.245999 sec  | 0.012001 sec |
+
+### music_mfcc
+
+| Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
+| --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
+| Perceptron (alpha: 0.0001)                          | 0.391    | 0.296 | 0.014001 sec  | 0.001 sec    |
+| Perceptron (alpha: 0.001)                           | 0.391    | 0.296 | 0.013999 sec  | 0.001 sec    |
+| Perceptron (alpha: 0.01)                            | 0.391    | 0.296 | 0.015 sec     | 0.0 sec      |
+| k-NN (1-NN)                                         | 0.358    | 0.364 | 0.008 sec     | 0.023001 sec |
+| k-NN (2-NN)                                         | 0.352    | 0.349 | 0.012999 sec  | 0.02 sec     |
+| k-NN (3-NN)                                         | 0.348    | 0.353 | 0.006998 sec  | 0.016001 sec |
+| Decision Tree (max features: None)                  | 0.418    | 0.428 | 0.039998 sec  | 0.001001 sec |
+| Decision Tree (max features: sqrt)                  | 0.445    | 0.438 | 0.005999 sec  | 0.0 sec      |
+| Decision Tree (max features: log2)                  | 0.379    | 0.381 | 0.003999 sec  | 0.001001 sec |
+| SVM                                                 | 0.712    | 0.707 | 0.077 sec     | 0.023999 sec |
+| Random Forests (num trees: 10, max features: sqrt)  | 0.615    | 0.598 | 0.048999 sec  | 0.002 sec    |
+| Random Forests (num trees: 10, max features: log2)  | 0.558    | 0.546 | 0.031999 sec  | 0.002001 sec |
+| Random Forests (num trees: 100, max features: sqrt) | 0.7      | 0.684 | 0.380085 sec  | 0.013 sec    |
+| Random Forests (num trees: 100, max features: log2) | 0.691    | 0.676 | 0.275002 sec  | 0.012 sec    |
+
+## Interpretation
+
+The combination that reached the highest F1 measure with 0.707 was the SVM algorithm trained with the mfcc feature.
+
+## Confusion Matrix
+
+| true \ pred | blues | classical | country | disco | hiphop | jazz  | metal | pop   | reggae | rock  |
+| ----------- | ----- | --------- | ------- | ----- | ------ | ----- | ----- | ----- | ------ | ----- |
+| blues       | 0.743 | 0.000     | 0.086   | 0.057 | 0.029  | 0.029 | 0.057 | 0.000 | 0.000  | 0.000 |
+| classical   | 0.000 | 0.970     | 0.000   | 0.000 | 0.000  | 0.030 | 0.000 | 0.000 | 0.000  | 0.000 |
+| country     | 0.000 | 0.000     | 0.788   | 0.030 | 0.000  | 0.030 | 0.030 | 0.030 | 0.030  | 0.061 |
+| disco       | 0.000 | 0.000     | 0.033   | 0.667 | 0.167  | 0.000 | 0.033 | 0.067 | 0.033  | 0.000 |
+| hiphop      | 0.000 | 0.000     | 0.037   | 0.000 | 0.741  | 0.000 | 0.037 | 0.037 | 0.148  | 0.000 |
+| jazz        | 0.000 | 0.000     | 0.094   | 0.000 | 0.000  | 0.844 | 0.000 | 0.000 | 0.031  | 0.031 |
+| metal       | 0.029 | 0.000     | 0.029   | 0.086 | 0.000  | 0.000 | 0.829 | 0.000 | 0.000  | 0.029 |
+| pop         | 0.000 | 0.000     | 0.030   | 0.152 | 0.061  | 0.000 | 0.000 | 0.697 | 0.030  | 0.030 |
+| reggae      | 0.034 | 0.034     | 0.103   | 0.069 | 0.069  | 0.000 | 0.000 | 0.034 | 0.655  | 0.000 |
+| rock        | 0.023 | 0.000     | 0.163   | 0.233 | 0.047  | 0.047 | 0.093 | 0.023 | 0.070  | 0.302 |
+
+Columns: true
+Rows: predicted
+
+best: classical with 97%
+worst: rock with 30.2%
+
+most accurate: only 3% of the classical songs were classified as jazz songs. all other classical songs were correctly classified as classical songs.
+biggest mismatch: 23% of rock songs were classified as disco songs
 
 # Comparison between data sets
 
