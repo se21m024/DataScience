@@ -187,7 +187,19 @@ With about 0.002 seconds, the testing time for the percepton and the decision tr
 
 ## Interpretation
 
-The combination that reached the highest F1 measure with 0.707 was the SVM algorithm trained with the mfcc feature.
+### Accuracy and F1 measure
+
+As expected, the choice of the extracted feature used to train the models with the songs of the music data set had a huge impact on the prediction results.
+
+When using the beats per minute (bpm) and the beats per minutes statistics (bpm_s) the classification accuracy was very poor. The F1 measure for bmp ranged from 0.012 (perceptron) to 0.134 (decision tree). The F1 measure for bmp_s ranged from 0.014 (perceptron) to 0.216 (random forests).
+The F1 measure was significantly higher when using the chroma feature extraction, ranging from 0.275 (perceptron) to 0.444 (SVM).
+The most accurate classification with an F1 measure of 0.707 was achived by using the Mel-frequency cepstral coefficients (MFCCs) in combination with SVM. The next accurate results were reached by random forests (up to an F1 of 0.684), the decison tree (up to an F1 of 0.438) and the k-NN (up to an F1 of 0.364). The least accurate results for the MFCCs was reached by the perceptron with an F1 measure of 0.296.
+
+### Training and testing time
+
+The training time for bpm and bpm_s was quite similar and significantly faster than for the Chrome and the MFCCs (which were also quite similar). When inspecting the MFCC training times, it can be seen that the decision tree with the log2 limit function required the least time (0.004 seconds) and the random forests with 100 trees and the sqrt limit function required the most time (0.38 seconds).
+
+The testing time was very similar among all extracted features with the perceptron being the fastest algorithm.
 
 ## Confusion Matrix
 
