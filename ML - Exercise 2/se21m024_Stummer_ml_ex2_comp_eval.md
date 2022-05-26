@@ -13,12 +13,12 @@ Music data set<br>
 Downloaded from Moodle
 <br/><br/>
 
-<div style="page-break-after: always"></div>
-
 # Small data set: Heart Failure Prediction
 
 The data was split into input features a target feature. The target feature is 'DEATH_EVENT' that indicates either the person has died. The column 'time' was not used as input feature due to the direct connection to the target feature 'death_event' according to https://www.kaggle.com/datasets/andrewmvd/heart-failure-clinical-data/discussion/178372. The train/test split was chosen to be 2/3 to 1/3 as required.
 For the k-NN apporach, k-d tree was chosen as algorithm to gain results within a reasonable amount of time.
+
+<div style="page-break-after: always"></div>
 
 ## Results table
 
@@ -41,11 +41,19 @@ For the k-NN apporach, k-d tree was chosen as algorithm to gain results within a
 
 ## Interpretation
 
-The highest (= best) accuracy and F1 measures were accomplished by the decision tree with unlimited number of features for consideration for each split. Other max feature settings resulted in lower accuracy and F1 measure.<br>
-The best accuracy reached with the perceptron is equal to the best accuracy reached with the k-NN algorithm with k=15. Changing the alpha value of the perceptron had no significantly impact on the accuracy or F1 measure. The highest F1 measure accomplished by the k-NN is a little higher than the one accomplished by the perceptron.
+### Accuracy and F1 measure
+
+The highest (= best) accuracy and F1 measures were accomplished by the decision tree with the sqrt or the log2 function to limit the number of features for consideration for each split. An F1 measure of 0.689 was achieved.
+The worst accuracy and F1 measures were reached by the perceptron (the chosen alpha value had no impact on the outcome). An F1 measure of only 0.223 was achieved.
 <br><br>
-The training time was very similar for all algorithms and all parameter settings with about 0.002 seconds. Only the decision tree with no maximum feature amount took significantly longer (0.003 seconds) and the decision tree with maximum features 'log2' took significantly shorter (0.001 seconds).<br>
-The testing time for all k-NN runs was about 0.004 seconds which is significantly higher than the testing time for the perceptron and the decision tree which was about 0.001 seconds.
+
+### Training and testing time
+
+The training time was very similar for the perceptron, the k-NN and the decision tree, ranging from about 0.002 seconds to about 0.003 seconds.
+With 0.006 seconds, the training time for the SVM took about two to three times as long as the algorithms mentioned above.
+The training time for the random forests ranged from 0.015 seconds (with 10 trees) to 0.128 seconds (with 100 trees). It can be seen that the overall training took about 5.8 times as long when training 10 times more forests.
+
+The testing time for the percepton was the least with 0.001 seconds an the longest for the random forests with about 0.011 seconds.
 
 <div style="page-break-after: always"></div>
 
@@ -74,14 +82,24 @@ For the k-NN approach, k-d tree was chosen as algorithm to gain results within a
 | Random Forests (num trees: 100, max features: sqrt) | 0.802    | 0.798 | 0.925223 sec  | 0.063999 sec |
 | Random Forests (num trees: 100, max features: log2) | 0.801    | 0.796 | 0.790013 sec  | 0.067001 sec |
 
+<div style="page-break-after: always"></div>
+
 ## Interpretation
 
-The highest (= best) accuracy and F1 measures were accomplished by the k-NN algorithm with k=5. Higher k resulted in slightly worse results.<br>
-The decision tree delivered the seconds best results (unlimited feature number performed best) regarding accuracy and F1 measure.
-The perceptron reached far lower accuracy and F1 measure (independent of the alpha value used).
+### Accuracy and F1 measure
+
+The highest (= best) accuracy and F1 measures were accomplished by the random forests with 100 trees and the sqrt function to limit the number of features for consideration for each split. An F1 measure of 0.798 was achieved. Even when using only 10 trees the random forests outperformed all the other algorithms.
+The worst accuracy and F1 measures were reached by the perceptron (the chosen alpha value had no impact on the outcome). An F1 measure of only 0.439 was achieved.
 <br><br>
-The decision tree was by far the fastest to train (especially with max features set to 'log2'). With a great gap, perceptron and k-NN followed.<br>
-Regarding the testing time the perceptron was fastest (half the time was required compared to the decision tree). The testing time of the k-NN was many magnitudes higher than for the two other algorithms.
+
+### Training and testing time
+
+The training time was quite similar for the perceptron, the k-NN, the unlimited decision tree and the random forests with 10 trees, ranging from about 0.073 seconds to about 0.134 seconds.
+The shortest training time was achived by the descition tree with either the sqrt or the log2 limit function with 0.016 seconds resp. 0.014 seconds.
+With 2.288 seconds, the training time for the SVM was by far the most time consuming one.
+The training time for the random forests with 100 trees ranged from 0.79 seconds to 0.93 seconds and is located between the timespans mentioned above. Like in the small data set, it can be seen that the overall training took for random forests took about 10 times longer when training 10 times more forests.
+
+With about 0.002 seconds, the testing time for the percepton and the decision tree was the least. The highest training time was required by the SVM with about 0.912 seconds.
 
 <div style="page-break-after: always"></div>
 
@@ -89,7 +107,7 @@ Regarding the testing time the perceptron was fastest (half the time was require
 
 ## Results tables
 
-### bpm
+### Beats per minutes
 
 | Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
 | --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
@@ -108,7 +126,7 @@ Regarding the testing time the perceptron was fastest (half the time was require
 | Random Forests (num trees: 100, max features: sqrt) | 0.164    | 0.124 | 0.110754 sec  | 0.009999 sec |
 | Random Forests (num trees: 100, max features: log2) | 0.164    | 0.124 | 0.111004 sec  | 0.01 sec     |
 
-### music_bpm_statistics
+### Beats per minutes statistics
 
 | Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
 | --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
@@ -127,7 +145,7 @@ Regarding the testing time the perceptron was fastest (half the time was require
 | Random Forests (num trees: 100, max features: sqrt) | 0.215    | 0.209 | 0.169999 sec  | 0.013 sec    |
 | Random Forests (num trees: 100, max features: log2) | 0.212    | 0.207 | 0.191 sec     | 0.013001 sec |
 
-### music_chroma
+### Chroma (similar to actual notes)
 
 | Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
 | --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
@@ -146,7 +164,9 @@ Regarding the testing time the perceptron was fastest (half the time was require
 | Random Forests (num trees: 100, max features: sqrt) | 0.433    | 0.413 | 0.322 sec     | 0.013001 sec |
 | Random Forests (num trees: 100, max features: log2) | 0.436    | 0.412 | 0.245999 sec  | 0.012001 sec |
 
-### music_mfcc
+<div style="page-break-after: always"></div>
+
+### Mel-frequency cepstral coefficients (MFCCs)
 
 | Algorithm with parameters                           | Accuracy | F1    | Training time | Testing time |
 | --------------------------------------------------- | -------- | ----- | ------------- | ------------ |
