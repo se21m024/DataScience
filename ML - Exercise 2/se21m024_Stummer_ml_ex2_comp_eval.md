@@ -10,7 +10,7 @@ Big data set: Covertype<br>
 The data set was provided by Jock A. Blackard and Colorado State University and downloaded from https://archive.ics.uci.edu/ml/datasets/Covertype.
 <br/><br/>
 Music data set<br>
-Downloaded from Moodle
+This dataset contains 1000 songs (100 songs for 10 genres) and was downloaded from Moodle.
 <br/><br/>
 
 # Small data set: Heart Failure Prediction
@@ -50,7 +50,7 @@ The worst accuracy and F1 measures were reached by the perceptron (the chosen al
 ### Training and testing time
 
 The training time was very similar for the perceptron, the k-NN and the decision tree, ranging from about 0.002 seconds to about 0.003 seconds.
-With 0.006 seconds, the training time for the SVM took about two to three times as long as the algorithms mentioned above.
+With 0.006 seconds, the training time for the support vector machine (SVM) took about two to three times as long as the algorithms mentioned above.
 The training time for the random forests ranged from 0.015 seconds (with 10 trees) to 0.128 seconds (with 100 trees). It can be seen that the overall training took about 5.8 times as long when training 10 times more forests.
 
 The testing time for the percepton was the least with 0.001 seconds an the longest for the random forests with about 0.011 seconds.
@@ -195,6 +195,8 @@ When using the beats per minute (bpm) and the beats per minutes statistics (bpm_
 The F1 measure was significantly higher when using the chroma feature extraction, ranging from 0.275 (perceptron) to 0.444 (SVM).
 The most accurate classification with an F1 measure of 0.707 was achived by using the Mel-frequency cepstral coefficients (MFCCs) in combination with SVM. The next accurate results were reached by random forests (up to an F1 of 0.684), the decison tree (up to an F1 of 0.438) and the k-NN (up to an F1 of 0.364). The least accurate results for the MFCCs was reached by the perceptron with an F1 measure of 0.296.
 
+<div style="page-break-after: always"></div>
+
 ### Training and testing time
 
 The training time for bpm and bpm_s was quite similar and significantly faster than for the Chrome and the MFCCs (which were also quite similar). When inspecting the MFCC training times, it can be seen that the decision tree with the log2 limit function required the least time (0.004 seconds) and the random forests with 100 trees and the sqrt limit function required the most time (0.38 seconds).
@@ -203,29 +205,24 @@ The testing time was very similar among all extracted features with the perceptr
 
 ## Confusion Matrix
 
-| true \ pred | blues | classical | country | disco | hiphop | jazz  | metal | pop   | reggae | rock  |
-| ----------- | ----- | --------- | ------- | ----- | ------ | ----- | ----- | ----- | ------ | ----- |
-| blues       | 0.743 | 0.000     | 0.086   | 0.057 | 0.029  | 0.029 | 0.057 | 0.000 | 0.000  | 0.000 |
-| classical   | 0.000 | 0.970     | 0.000   | 0.000 | 0.000  | 0.030 | 0.000 | 0.000 | 0.000  | 0.000 |
-| country     | 0.000 | 0.000     | 0.788   | 0.030 | 0.000  | 0.030 | 0.030 | 0.030 | 0.030  | 0.061 |
-| disco       | 0.000 | 0.000     | 0.033   | 0.667 | 0.167  | 0.000 | 0.033 | 0.067 | 0.033  | 0.000 |
-| hiphop      | 0.000 | 0.000     | 0.037   | 0.000 | 0.741  | 0.000 | 0.037 | 0.037 | 0.148  | 0.000 |
-| jazz        | 0.000 | 0.000     | 0.094   | 0.000 | 0.000  | 0.844 | 0.000 | 0.000 | 0.031  | 0.031 |
-| metal       | 0.029 | 0.000     | 0.029   | 0.086 | 0.000  | 0.000 | 0.829 | 0.000 | 0.000  | 0.029 |
-| pop         | 0.000 | 0.000     | 0.030   | 0.152 | 0.061  | 0.000 | 0.000 | 0.697 | 0.030  | 0.030 |
-| reggae      | 0.034 | 0.034     | 0.103   | 0.069 | 0.069  | 0.000 | 0.000 | 0.034 | 0.655  | 0.000 |
-| rock        | 0.023 | 0.000     | 0.163   | 0.233 | 0.047  | 0.047 | 0.093 | 0.023 | 0.070  | 0.302 |
+|           | blues | classical | country | disco | hiphop | jazz  | metal | pop   | reggae | rock  |
+| --------- | ----- | --------- | ------- | ----- | ------ | ----- | ----- | ----- | ------ | ----- |
+| blues     | 0.743 | 0.000     | 0.086   | 0.057 | 0.029  | 0.029 | 0.057 | 0.000 | 0.000  | 0.000 |
+| classical | 0.000 | 0.970     | 0.000   | 0.000 | 0.000  | 0.030 | 0.000 | 0.000 | 0.000  | 0.000 |
+| country   | 0.000 | 0.000     | 0.788   | 0.030 | 0.000  | 0.030 | 0.030 | 0.030 | 0.030  | 0.061 |
+| disco     | 0.000 | 0.000     | 0.033   | 0.667 | 0.167  | 0.000 | 0.033 | 0.067 | 0.033  | 0.000 |
+| hiphop    | 0.000 | 0.000     | 0.037   | 0.000 | 0.741  | 0.000 | 0.037 | 0.037 | 0.148  | 0.000 |
+| jazz      | 0.000 | 0.000     | 0.094   | 0.000 | 0.000  | 0.844 | 0.000 | 0.000 | 0.031  | 0.031 |
+| metal     | 0.029 | 0.000     | 0.029   | 0.086 | 0.000  | 0.000 | 0.829 | 0.000 | 0.000  | 0.029 |
+| pop       | 0.000 | 0.000     | 0.030   | 0.152 | 0.061  | 0.000 | 0.000 | 0.697 | 0.030  | 0.030 |
+| reggae    | 0.034 | 0.034     | 0.103   | 0.069 | 0.069  | 0.000 | 0.000 | 0.034 | 0.655  | 0.000 |
+| rock      | 0.023 | 0.000     | 0.163   | 0.233 | 0.047  | 0.047 | 0.093 | 0.023 | 0.070  | 0.302 |
 
-Columns: true
-Rows: predicted
+(columns: actual classes, rows: predicted classes)
 
-best: classical with 97%
-worst: rock with 30.2%
-
-most accurate: only 3% of the classical songs were classified as jazz songs. all other classical songs were correctly classified as classical songs.
-biggest mismatch: 23% of rock songs were classified as disco songs
+When inspecting the confusion matrix of the best overall result (SVM with MCFFs) it can be seen that 97% of the tested classical songs were categorized correctly. More specifically, only 3% of the classical songs were classified as jazz songs. All other classical songs were correctly classified as classical songs.
+The genre the model had the most problems was rock. Only 30.2% of the rock songs were corretly classified. It seems to be most difficult for the model to distinct rock songs from disco songs. As many as 23% of all rock songs were classified as disco songs.
 
 # Comparison between data sets
 
-For the small data set the decision tree delivered the most accurate results, for the big data set the k-NN algorithm performed best.<br>
-While the time required for training and testing did not vary much among the algorithms on the small data set, a huge difference could be spotted on the big data set when comparing the efficiency for the different algorithms.
+For the small data set the decision tree delivered the most accurate results, for the big data set the random forests algorithm performed best. For the music classification the support vector machine performed best.
