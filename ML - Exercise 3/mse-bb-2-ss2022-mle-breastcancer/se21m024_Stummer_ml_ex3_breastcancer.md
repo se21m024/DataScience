@@ -1,4 +1,4 @@
-# Machine Learning<br>Exercise 3 - Kaggle competition<br>Data Set: Breast Cancer
+# Machine Learning<br>Exercise 3 - Kaggle competition 1/2<br>Data Set: Breast Cancer
 
 <br/>Student: se21m024, Thomas Stummer, matriculation number: 1425616
 <br/><br/>
@@ -7,7 +7,7 @@
 
 This document describes the process to participate at the Kaggle competition for the data set 'breastcancer' and summarizes the results.
 
-## Releated Files and Links
+## Related Files and Links
 
 - Locally developed and tested notebook:<b><i>se21m024_Stummer_ml_ex3_breastcancer.ipynb</i></b>
 - Kaggle submission description:<b><i>se21m024_Stummer_ml_ex3_breastcancer_kaggle.pdf</i></b>
@@ -20,7 +20,10 @@ The notebook <i>se21m024_Stummer_ml_ex3_breastcancer.ipynb</i> was locally devel
 
 ## Data Set Analysis
 
-todo: A description of the datasets, including a short analysis of the features.
+The data set contains different health parameters for patients including the information whether a patient had a recurrence event of breast cancer or not.
+The features appear to be detailed parameters of the health state (regarding the cancer) of the patient. Without further domain knowledge I was not able to interpret the data provided in more detail. The distribution for the individual features is mainly nearly normal distributed or with a shift to one side (e.g. for the convacityMean) or with a tendency to multi modality (e.g. concavePointsMean).
+
+<div style="page-break-after: always"></div>
 
 ## Utilized Software
 
@@ -58,7 +61,7 @@ The best performing algorithm on this test split was than retrained with the who
 
 ### Local Results
 
-The best performing setting was the SVM algorithm using default settings and the SVC classifier which accomplished an accuracy of 0.968 and an F1 messure of 0.968 on the learning set.
+The best performing setting was the SVM algorithm using default settings and the SVC classifier which accomplished an accuracy of 0.968 and an F1 measure of 0.968 on the learning set.
 
 ### Kaggle Results
 

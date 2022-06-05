@@ -1,4 +1,4 @@
-# Machine Learning<br>Exercise 3 - Kaggle competition<br>Data Set: Stroke
+# Machine Learning<br>Exercise 3 - Kaggle competition 2/2<br>Data Set: Stroke
 
 <br/>Student: se21m024, Thomas Stummer, matriculation number: 1425616
 <br/><br/>
@@ -7,7 +7,7 @@
 
 This document describes the process to participate at the Kaggle competition for the data set 'stroke' and summarizes the results.
 
-## Releated Files and Links
+## Related Files and Links
 
 - Locally developed and tested notebook:<b><i>se21m024_Stummer_ml_ex3_stroke.ipynb</i></b>
 - Kaggle submission description:<b><i>se21m024_Stummer_ml_ex3_stroke_kaggle.pdf</i></b>
@@ -20,12 +20,15 @@ The notebook <i>se21m024_Stummer_ml_ex3_stroke.ipynb</i> was locally developed a
 
 ## Data Set Analysis
 
-todo: A description of the datasets, including a short analysis of the features.
+The data set contains different parameters about persons including the information whether a person suffered a stroke or not.
+Some features like hypertension and heart_disease have a significant shift towards one of the binary possibilities (factor of 100 to 200). Other features are more equally represented in the data set like the gender split which is slightly shifted towards females (59% female, 41% male) or the residence type (50% urban and 50% rural).
 
 ## Utilized Software
 
 Operating System:<br>
 Windows 10
+
+<div style="page-break-after: always"></div>
 
 Software Version:<br>
 Python 3.8.5
