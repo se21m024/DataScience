@@ -8,7 +8,7 @@ Operating System:<br>
 Windows 10
 
 Algorithm used for prediction:<br>
-Random Forests (num trees: 100, max features: sqrt) accomplished an F1 messure of 0.938 on the learning set and was therefore chosen for the actual prediction.
+The best performing setting was the k-NN algorithm with k=2, which accomplished an accuracy of 0.954 and an F1 measure of 0.936 on the learning set and was therefore chosen for the actual prediction.
 
 Processing applied to the data before training/predicting:<br>
 The non-numeric features in the data sets have been mapped to numeric values before further processing.
