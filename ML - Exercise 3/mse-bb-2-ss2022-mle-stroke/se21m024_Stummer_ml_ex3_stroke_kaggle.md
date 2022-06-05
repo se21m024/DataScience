@@ -8,10 +8,11 @@ Operating System:<br>
 Windows 10
 
 Algorithm used for prediction:<br>
-SVM using default settings and the SVC classifier accomplished an F1 messure of 0.968 on the learning set and was therefore chosen for the actual prediction.
+Random Forests (num trees: 100, max features: sqrt) accomplished an F1 messure of 0.938 on the learning set and was therefore chosen for the actual prediction.
 
 Processing applied to the data before training/predicting:<br>
-The learning data was split into the input features (everything except of the 'ID' and 'class' column) and the target feature (the 'class' column).
+The non-numeric features in the data sets have been mapped to numeric values before further processing.
+The learning data was split into the input features (everything except of the 'ID' and 'stroke' column) and the target feature (the 'stroke' column).
 
 Then the learning data was split into 2/3 trainig set and 1/3 test set. With this split 4 different algorithms with different parameters were trained:
 

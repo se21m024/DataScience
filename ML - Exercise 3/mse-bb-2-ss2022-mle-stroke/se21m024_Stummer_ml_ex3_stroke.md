@@ -5,7 +5,7 @@ Operating System:
 Windows 10
 
 Algorithm used for prediction:
-SVM using default settings and the SVC classifier accomplished an F1 messure of 0.968 on the learning set and was therefore chosen for the actual prediction.
+SVM using default settings and the SVC classifier accomplished an F1 messure of 0.xxx on the learning set and was therefore chosen for the actual prediction.
 
 Processing applied to the data before training/predicting:
 The learning data was split into the input features (everything except of the 'ID' and 'class' column) and the target feature (the 'class column').
