@@ -1,0 +1,2 @@
+Base line: 10%
+The baseline is 52.3%, i.e. a 'dumb' classifier can assign all predictions to the majority class achieving this accurcay. We aim at building a classifier that performs better than that.
