@@ -114,7 +114,7 @@ The batch size as well as the number of epochs was fixed for all tests to make t
 ### 3.5. Results
 
 Without Data Augmentation:<br>
-Accuracy on test set: 0.6084
+Accuracy on test set: 0.6364
 
 With Data Augmentation:<br>
 Accuracy on test set: 0.3495
@@ -123,5 +123,5 @@ Accuracy on test set: 0.3495
 
 As minimum base line an accuracy of 0.1 can be proposed because the images are distributed evenly among 10 classes (each of the 10 classes of the test set contains 1000 images).
 
-With an accuracy of 0.6084 on the test set the convolutional neural network performed significantly faster than the simple fully connected network with an accuracy of only 0.4498. While the simple network could be trained within about 25 seconds, the convolutional network required around 15 minutes to be trained with the same number of epochs and the same batch size.<br>
+With an accuracy of 0.6364 on the test set the convolutional neural network performed significantly faster than the simple fully connected network with an accuracy of only 0.4498. While the simple network could be trained within about 25 seconds, the convolutional network required around 15 minutes to be trained with the same number of epochs and the same batch size.<br>
 Surprisingly, when adding augemntated data, the convolutional neural network's accuracy decreased with a result of 0.3495 which is even worse than the result of the simple fully connected neural network.
