@@ -44,7 +44,7 @@ The architecture was initially taken from the configuration in https://github.co
 - Hidden Layer 2: 256 neurons with Sigmoid activation function
 - Output Layer: 10 neurons with Softmax activation function
 
-Total number of parameters: 855,050
+Total number of parameters: 855.050
 
 ### 2.2. Training and Prediction
 
@@ -113,15 +113,25 @@ The batch size as well as the number of epochs was fixed for all tests to make t
 
 ### 3.5. Results
 
-Without Data Augmentation:<br>
+<b>Without Data Augmentation:</b><br>
 Accuracy on test set: 0.6364
 
-With Data Augmentation:<br>
+It can be observed that the highest increase in accuracy (and highest decrease in loss) took place with the second training epoch. After that followed a nearly linear trend. If the number of epochs was increased beyond the fixed value of 5, a further increase in accuracy might have been possible.
+
+![Training](./screenshots/Training.png)
+
+<div style="page-break-after: always"></div>
+
+<b>With Data Augmentation:</b><br>
 Accuracy on test set: 0.3495
+
+The structure of the functions of accuracy and loss appears to be very similar to the functions without data augmentation. With the second training epoch the highest change towards higher accuracy was achieved, followed by a very weak linear trend.
+
+![TrainingAug](./screenshots/TrainingAug.png)
 
 ## 4. Analysis of Results
 
 As minimum base line an accuracy of 0.1 can be proposed because the images are distributed evenly among 10 classes (each of the 10 classes of the test set contains 1000 images).
 
 With an accuracy of 0.6364 on the test set the convolutional neural network performed significantly faster than the simple fully connected network with an accuracy of only 0.4498. While the simple network could be trained within about 25 seconds, the convolutional network required around 15 minutes to be trained with the same number of epochs and the same batch size.<br>
-Surprisingly, when adding augemntated data, the convolutional neural network's accuracy decreased with a result of 0.3495 which is even worse than the result of the simple fully connected neural network.
+Surprisingly, when adding augemntated data, the convolutional neural network's accuracy decreased with a result of 0.3495 which is even worse than the result of the simple fully connected neural network. When obsering the training curves, it appears to be possible that the data augemented apporach would only lead to better results with a higher number of epochs, as the learning curve of the data augmented training is more flat than the one without data augmentation.
